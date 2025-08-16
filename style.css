@@ -1,0 +1,1209 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* header  */
+.nav-main {
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.logo h1 a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding-left: 9%;
+    margin-right: -7%;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+    
+.nav-list a {
+    text-decoration: none;
+    padding: 14px;
+    color: #ffffff;
+}
+
+.nav-list a:hover {
+    color: #FFbe33;
+    transition: all 0.9s;
+}
+
+.main-icon {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.main-icon i {
+    padding: 10px;
+}
+
+.ri-contacts-fill,
+.ri-shopping-cart-fill,
+.ri-search-2-line {
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}
+
+.ri-contacts-fill:hover,
+.ri-shopping-cart-fill:hover,
+.ri-search-2-line:hover {
+    color: #FFbe33;
+    transition: all 0.9s;
+}
+
+#main-header {
+    background-image: url("./images/hero-bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.anc-ord {
+    background-color: #FFbe33;
+    color: white;
+    padding: 8px;
+    border-radius: 40px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    width: 105px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.anc-ord:hover {
+    background-color: #eca100;
+}
+
+.anc-ord a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.swiper-container {
+    height: calc(100vh - 36%);
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    color: #ffffff;
+}
+
+.head {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+    font-family: "Dancing Script", cursive;
+}
+
+.para-slide {
+    margin-bottom: 16px;
+    max-width: 480px;
+    font-size: 13px;
+}
+
+.btn-main {
+    margin-bottom: 16px;
+    padding: 11px 43px;
+    background-color: #FFbe33;
+    border-radius: 40px;
+    display: inline-block;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: auto;  
+}
+
+.btn-main:hover {
+    background-color: #ffaf02;
+}
+
+.btn-para {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Mobile Menu Styles kyy liya */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger i {
+    color: white;
+    font-size: 24px;
+}
+
+.mobile-icons {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .swiper-container {
+        padding-left: 40px;
+    }
+    
+    .head {
+        font-size: 2.8rem;
+    }
+    
+    .para-slide {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+        z-index: 999;
+    }
+    
+    .nav-list.active {
+        right: 0;
+    }
+    
+    .nav-list a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+    }
+    
+    .main-icon {
+        display: none;
+    }
+    
+    .mobile-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .mobile-icons i,
+    .mobile-icons .anc-ord {
+        margin: 10px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .swiper-container {
+        padding-left: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .head {
+        font-size: 2.2rem;
+    }
+    
+    .para-slide {
+        max-width: 90%;
+        margin: 0 auto 16px;
+    }
+    
+    .btn-main {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .head {
+        font-size: 1.8rem;
+    }
+    
+    .para-slide p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-main {
+        padding: 8px 25px;
+        font-size: 16px;
+    }
+    
+    .logo h1 a {
+        font-size: 28px;
+    }
+}
+
+
+
+/*                   Offers Section 20% off start css                   */
+
+.card-section {
+        padding: 90px;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    .card {
+        background-color: #222831;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 7% 1%;
+        width: 440px;
+        
+        max-width: 100%;
+        box-sizing: border-box;
+        max-height: 170px;;
+        border-radius: 5px;
+    }
+
+    .card-image-container {
+        border: 4px solid #ffbe33;
+        border-radius: 100px;
+        width: 130px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .card-image:hover {
+        transform: scale(1.05);
+    }
+
+    .card-content-offer{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 1%;
+        
+    }
+
+    .dancing-script {
+        font-family: "Dancing Script", cursive;
+        color: white;
+        font-size:25px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .dancing-script:hover {
+        color: #FFbe33;
+    }
+
+    .discount {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+    }
+
+    .discount span:last-child {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+
+    .order-button {
+        border: none;
+        background-color: #ffbe33;
+        width: 130px;
+        padding: 11px;
+        border-radius: 20px;
+        color: white;
+        font-weight: 550;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .order-button:hover {
+        background-color: #e69c00;
+    }
+
+   
+    @media (max-width: 1024px) {
+        .card-section {
+            gap: 40px;
+            padding: 60px 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .card-image-container {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .dancing-script {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-section {
+            padding: 40px 20px;
+            gap: 30px;
+        }
+        
+        .card {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        
+        .card-content {
+            align-items: center;
+        }
+        
+        .order-button {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .card-image-container {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .dancing-script {
+            font-size: 19px;
+        }
+    }
+
+@media(max-width: 576px){
+    .dancing-script{
+        font-size: 19px;
+    }
+}
+@media(max-width: 400px){
+    .dancing-script{
+        font-size: 16px;
+    }
+}   
+
+@media(max-width:576px){
+    .discount span:last-child {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    
+        
+    }
+}
+
+@media(max-width:400px){
+    .discount span:last-child {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        
+        
+    }
+}
+
+
+    @media(max-width:576px){
+        .card {
+            background-color: #222831;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1%;
+            width: 460px;
+            max-width: 100%;
+            box-sizing: border-box;
+            max-height: 270px;;
+        }
+    } 
+
+@media(max-width:400px){
+    .card {
+        background-color: #222831;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1%;
+        width: 460px;
+        max-width: 100%;
+        box-sizing: border-box;
+        max-height: 270px;;
+    }
+}
+
+
+
+
+
+
+
+/* Menu Filter Section all burger pizza etc */
+.container {
+    width: 70%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.menu-filter {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-filter h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #0b0e11;
+    font-weight: 590;
+    
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.tab-btn {
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid #222831;
+    color: #394453;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: #000000;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .offer-content {
+        padding: 30px;
+    }
+    
+    .offer-content h3 {
+        font-size: 24px;
+    }
+    
+    .offer-content h4 {
+        font-size: 36px;
+    }
+    
+    .offer-content h4 span {
+        font-size: 20px;
+    }
+    
+    .menu-filter h2 {
+        font-size: 30px;
+    }
+    
+    .tab-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offers-section, .menu-filter {
+        padding: 40px 0;
+    }
+    
+    .offer-card {
+        max-width: 100%;
+    }
+    
+    .offer-content {
+        padding: 25px;
+    }
+    
+    .filter-tabs {
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* Menu Items Section */
+.menu-items {
+    padding: 50px 0;
+    background-color: #fff;
+    margin-top: -5%;
+
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-card{
+     width: 270px; 
+    height: auto; 
+    border-radius: 15px;
+    overflow: hidden;
+    
+    
+}
+
+
+.card-content {
+    padding:2%;
+    text-align: center;
+    background-color: #f1f2f3;
+    object-fit: cover; 
+     clip-path: polygon(0% 0, 100% 100, 100% 85%, 10% 10%);
+    
+    
+}
+
+.card-content-ii {
+   color: white;
+   
+   
+}
+
+
+.card-content img{
+    background-color:none;
+    padding: 9px;
+    width: 60%;
+    
+    
+    
+}
+
+.ii{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-content-ii{
+    background-color:#222831;
+    
+    
+
+}
+
+.card-content-ii h3 {
+    font-size: 1.25rem;
+    font-weight: 600px;
+    margin-bottom: 1%;
+    color: #f2f4f5;
+    padding-left: 4%;
+    
+}
+
+.card-content-ii p {
+    color: #e3e1e1;
+    margin-bottom: 10px;
+    margin-top: 0%;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-left: 4%;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e9e6e6;
+    display: flex;
+    padding-left: 4%;
+    padding-bottom: 5%;
+    
+   
+}
+
+.price .ri-shopping-cart-fill{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #FFbe33;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70%;
+    width: 30px;
+    height: 30px;
+
+
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-content h3 {
+        font-size: 20px;
+    }
+    
+    .price {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-items {
+        padding: 40px 0;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+
+
+
+/* About Us Section */
+.about-section {
+    padding: 80px 0;
+    background-color: #222831;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #a7a7a7;
+    font-family: 'Dancing Script', cursive;
+}
+
+.about-text p {
+    color: #7c7b7b;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #FFbe33;
+    color: white;
+    padding: 10px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    font-family: 'Dancing Script', cursive;
+}
+
+.read-more-btn:hover {
+    background-color: #ffaf02;
+    transform: scale(1.05);
+}
+
+.read-more-btn i {
+    margin-left: 5px;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover .img-responsive {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-content {
+        gap: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-text, .about-image {
+        width: 100%;
+    }
+    
+    .about-text {
+        padding-top: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 28px;
+    }
+    
+    .about-text p {
+        font-size: 15px;
+    }
+    
+    .read-more-btn {
+        align-self: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-text h2 {
+        font-size: 26px;
+    }
+    
+    .read-more-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* Book Table Section */
+.book-table-section {
+    padding: 80px 0;
+    background-color: #fff;
+    font-family: 'Dancing Script', cursive;
+}
+
+.section-title {
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+    color: #222831;
+}
+
+.book-content {
+    display: flex;
+    gap: 30px;
+}
+
+.form-column, .map-column {
+    flex: 1;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #FFbe33;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 190, 51, 0.2);
+}
+
+.book-btn {
+    background-color: #FFbe33;
+    color: white;
+    border: none;
+    margin-top: 14px;
+    padding: 12px;  
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    width: 35%;
+}
+
+.book-btn:hover {
+    background-color: #ffaf02;
+    transform: translateY(-3px);
+}
+
+.map-placeholder {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.address-info {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.address-info p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .book-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-content {
+        flex-direction: column;
+    }
+    
+    .map-placeholder {
+        height: 300px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .book-table-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+    }
+    
+    .book-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: #222831;
+}
+
+.testimonials-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.testimonial-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 410px;
+    
+    margin: 1%;
+   
+}
+
+.testimonial-box {
+    background: #222831;
+    border-radius: 20px 20px 0 0;
+    padding: 28px 22px 17px 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    min-height: 125px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.customer-info h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+.customer-info span {
+    color: #fffefe;
+    font-size: 14px;
+}
+
+/* Circular white bg for image */
+.image-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start; 
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.customer-image-bg {
+    background: #FFbe33;
+    border-radius: 50%;
+    padding: 9px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.customer-image-bg img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .testimonials-row {
+    gap: 24px;
+  }
+  .testimonial-col {
+    width: 260px;
+  }
+  .customer-image-bg img {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+  .testimonial-col {
+    width: 98%;
+    max-width: 380px;
+  }
+  .section-title {
+    font-size: 25px;
+  }
+}
+
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #222831;
+    color: white;
+    padding: 60px 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #FFbe33;
+}
+
+.brand-name {
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.brand-description {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.contact-info p,
+.opening-hours p {
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+.contact-info strong,
+.opening-hours strong {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.copyright-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #999;
+    font-size: 14px;
+}
+
+.copyright-section p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 40px 0 20px;
+    }
+    
+    .brand-name {
+        font-size: 32px;
+    }
+    
+    .footer-title {
+        font-size: 22px;
+    }
+}
